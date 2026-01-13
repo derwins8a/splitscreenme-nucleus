@@ -4,6 +4,8 @@
     <OutputType>Exe</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <Configurations>Debug;Release;SaveEdit Packaging;TestDebug</Configurations>
+    <Platforms>AnyCPU;x86;x64;Win32</Platforms>
+    <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <OutputPath>bin\x64\Debug\</OutputPath>
@@ -22,6 +24,14 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
   <PropertyGroup>
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
@@ -37,7 +47,9 @@
   <ItemGroup>
     <ProjectReference Include="..\NucleusGaming\Nucleus.Gaming.csproj" />
   </ItemGroup>
+  <PropertyGroup />
   <PropertyGroup>
-    <PostBuildEvent>copy $(TargetPath) $(SolutionDir)NucleusCoopTool\bin\$(ConfigurationName)\Nucleus.IJ$(PlatformName)$(TargetExt)</PostBuildEvent>
+    <AssemblyName Condition="'$(Platform)' == 'x64'">Nucleus.IJx64</AssemblyName>
+    <AssemblyName Condition="'$(Platform)' == 'x86' or '$(Platform)' == 'Win32'">Nucleus.IJx86</AssemblyName>
   </PropertyGroup>
 </Project>
