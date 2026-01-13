@@ -1,0 +1,20 @@
+<Project>
+	<PropertyGroup>
+		<BaseOutputPath>$(MSBuildThisFileDirectory)NucleusCoopTool\bin\</BaseOutputPath>
+		<OutputPath>$(BaseOutputPath)$(Configuration)\</OutputPath>
+		<OutDir>$(BaseOutputPath)$(Configuration)\</OutDir>
+
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(MSBuildProjectExtension)' == '.vcxproj'">
+		<IntDir>$(ProjectDir)obj\$(Configuration)\</IntDir>
+	</PropertyGroup>
+
+	<ItemDefinitionGroup Condition="'$(MSBuildProjectExtension)' == '.vcxproj'">
+		<Link>
+			<ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+		</Link>
+	</ItemDefinitionGroup>
+</Project>
