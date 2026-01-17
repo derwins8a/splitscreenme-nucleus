@@ -4,6 +4,7 @@ using Nucleus.Gaming.Controls;
 using Nucleus.Gaming.Coop;
 using Nucleus.Gaming.UI;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -27,7 +28,9 @@ namespace Nucleus.Coop
 
     public class GameControl : UserControl, IDynamicSized, IRadioControl
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public GenericGameInfo GameInfo { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public UserGameInfo UserGameInfo { get; set; }
         private PictureBox picture;
         private PictureBox playerIcon;
@@ -56,8 +59,10 @@ namespace Nucleus.Coop
                 }
             }
         }
-       
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string TitleText { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string PlayerText { get; set; }
 
         private Bitmap favorite_Unselected;
@@ -405,6 +410,7 @@ namespace Nucleus.Coop
             OnClick(e);            
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Image Image
         {
             get => picture.Image;

@@ -14,6 +14,7 @@ namespace Nucleus.Gaming.Controls
 
         private List<string> items = new List<string>();
         [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<string> Items
         {
             get
@@ -29,6 +30,7 @@ namespace Nucleus.Gaming.Controls
 
         private string itemsCollection;
         [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string ItemsCollection
         {
             get => itemsCollection;
@@ -49,6 +51,7 @@ namespace Nucleus.Gaming.Controls
         }
 
         [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int MaxDropDownItems
         {
             get;
@@ -56,6 +59,7 @@ namespace Nucleus.Gaming.Controls
         }
 
         [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int MaxLength
         {
             get;
@@ -64,6 +68,7 @@ namespace Nucleus.Gaming.Controls
 
 
         [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int SelectedIndex
         {
             get;
@@ -73,6 +78,7 @@ namespace Nucleus.Gaming.Controls
         private ControlListBox dropDownList;
 
         private object selectedItem;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public object SelectedItem
         {
             get => selectedItem;
@@ -87,6 +93,7 @@ namespace Nucleus.Gaming.Controls
         private int ItemIndex = 0;
 
         private int scrollOffset = 5;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int ScrollOffset
         {
             get => scrollOffset;

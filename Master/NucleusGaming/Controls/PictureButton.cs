@@ -8,6 +8,7 @@ namespace Nucleus.Gaming
     [DefaultEvent("Click")]
     public partial class PictureButton : UserControl
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Image Image
         {
             get => button_Picture.Image;

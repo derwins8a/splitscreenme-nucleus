@@ -3,6 +3,7 @@ using Nucleus.Gaming;
 using Nucleus.Gaming.Tools.GlobalWindowMethods;
 using Nucleus.Gaming.UI;
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -31,12 +32,14 @@ namespace SplitTool.Controls
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string Title
         {
             get => titleLabel.Text;
             set => titleLabel.Text = value;
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string Details
         {
             get => descLabel.Text;
@@ -49,6 +52,7 @@ namespace SplitTool.Controls
 
         public bool EnableHighlighting { get; private set; }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public object Data { get; set; }
         public event Action<object> OnSelected;
 

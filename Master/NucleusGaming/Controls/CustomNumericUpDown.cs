@@ -13,6 +13,7 @@ namespace Nucleus.Gaming.Controls
         public bool InvalidParent;
 
         private int _value = 0;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int Value
         {
             get => _value;
@@ -27,6 +28,7 @@ namespace Nucleus.Gaming.Controls
         [EditorBrowsable(EditorBrowsableState.Always), Browsable(true)]
         [Editor(typeof(WindowsFormsComponentEditor), typeof(Color))]
         [Category("Appearance"), Description("Updown Button BackColor")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color UpdownBackColor
         {
             get { return mUpdown; }

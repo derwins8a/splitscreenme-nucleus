@@ -4,6 +4,7 @@ using Nucleus.Gaming.Controls;
 using Nucleus.Gaming.Coop;
 using Nucleus.Gaming.UI;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
@@ -14,6 +15,7 @@ namespace Nucleus.Coop
 {
     public class HorizontalGameControl : UserControl, IDynamicSized, IRadioControl
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public GenericGameInfo GameInfo { get; set; }
         public UserGameInfo UserGameInfo { get; private set; }
         private PictureBox picture;
@@ -29,7 +31,9 @@ namespace Nucleus.Coop
         private Color userOverBackColor;
         private Color userLeaveBackColor;
         public bool favorite;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string TitleText { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string PlayerText { get; set; }
         private Bitmap favorite_Unselected;
         private Bitmap favorite_Selected;
@@ -374,6 +378,7 @@ namespace Nucleus.Coop
             OnClick(e);            
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Image Image
         {
             get => picture.Image;

@@ -1,6 +1,7 @@
 ﻿using Nucleus.Coop;
 using Nucleus.Gaming.UI;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -12,9 +13,12 @@ namespace Nucleus.Gaming
         private int border = 1;
 
         public event Action<object, Control> SelectedChanged;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Size Offset { get; set; }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Control SelectedControl { get; protected set; }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int Border
         {
             get => border;

@@ -4,6 +4,7 @@ using Nucleus.Gaming.Coop.InputManagement;
 using Nucleus.Gaming.Tools.GlobalWindowMethods;
 using Nucleus.Gaming.Windows.Interop;
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -50,6 +51,7 @@ namespace Nucleus.Gaming.Forms
 
         private bool hotkeysCooldown = false;
         private System.Windows.Forms.Timer hotkeysCooldownTimer;//Avoid hotkeys spamming
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Action<IntPtr> RawInputAction { get; set; }
 
         public HotkeyListener()

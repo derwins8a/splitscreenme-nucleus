@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using Nucleus.Gaming.Coop.Generic;
 using Nucleus.Gaming.Forms;
-using System.Management.Instrumentation;
+//using System.Management.Instrumentation;
 using System.Windows.Forms;
 
 namespace Nucleus.Gaming

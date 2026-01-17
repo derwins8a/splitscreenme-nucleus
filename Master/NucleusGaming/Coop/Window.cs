@@ -6,7 +6,7 @@ using System.Collections;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO.MemoryMappedFiles;
-using System.Management.Instrumentation;
+//using System.Management.Instrumentation;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
 

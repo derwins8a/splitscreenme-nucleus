@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -11,6 +12,7 @@ namespace Nucleus.Gaming
         private Image imagePressed;
         private Image imageDisabled;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Image Image
         {
             get => image;
@@ -20,6 +22,7 @@ namespace Nucleus.Gaming
                 Invalidate();
             }
         }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Image ImageHover
         {
             get => imageHover;
@@ -29,6 +32,7 @@ namespace Nucleus.Gaming
                 Invalidate();
             }
         }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Image ImagePressed
         {
             get => imagePressed;
@@ -39,6 +43,7 @@ namespace Nucleus.Gaming
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Image ImageDisabled
         {
             get => imageDisabled;

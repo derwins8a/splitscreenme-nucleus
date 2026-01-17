@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -14,6 +15,7 @@ namespace Nucleus.Gaming.Controls
 
 
         protected Bitmap len;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Bitmap EdgeImage
         {
             get => edge;
@@ -34,12 +36,14 @@ namespace Nucleus.Gaming.Controls
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color BackgroundColor
         {
             get;
             set;
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Bitmap BorderImage
         {
             get => len;
