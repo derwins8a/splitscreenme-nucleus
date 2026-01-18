@@ -15,6 +15,7 @@ namespace Nucleus.Coop.Controls
     public partial class PlaytimePanel : UserControl
     {
         private string playtime;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string Playtime 
         {
             get => playtime;
@@ -26,6 +27,7 @@ namespace Nucleus.Coop.Controls
         }
 
         private string lastPLayed;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string LastPlayed
         {
             get => lastPLayed;

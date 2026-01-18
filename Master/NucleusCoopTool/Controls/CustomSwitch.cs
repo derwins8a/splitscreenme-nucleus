@@ -12,6 +12,7 @@ namespace Nucleus.Coop.Controls
     {      
         [Browsable(true)]
         private bool radioChecked;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool RadioChecked
         {
             get { return radioChecked; }
@@ -31,6 +32,7 @@ namespace Nucleus.Coop.Controls
         }
 
         [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string RadioText
         {
             get { return label.Text; }
@@ -38,6 +40,7 @@ namespace Nucleus.Coop.Controls
         }
 
         [Browsable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color TextColor
         {
             get { return label.ForeColor; }
@@ -45,6 +48,7 @@ namespace Nucleus.Coop.Controls
         }
 
         [Browsable(true)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color RadioBackColor
         {
             get { return BackColor; }
@@ -63,6 +67,7 @@ namespace Nucleus.Coop.Controls
 
         [Browsable(true)]
         private string radioTooltipText;
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string RadioTooltipText
         {
             get {return radioTooltipText;}

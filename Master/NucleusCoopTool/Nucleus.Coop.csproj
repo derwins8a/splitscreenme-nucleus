@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net472</TargetFramework>
+		<TargetFrameworks>net472;net10.0-windows</TargetFrameworks>
 		<OutputType>WinExe</OutputType>
 		<AssemblyName>NucleusCoop</AssemblyName>
 		<SccProjectName></SccProjectName>
@@ -31,6 +31,7 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<Configurations>Debug;Release;SaveEdit Packaging;TestDebug</Configurations>
 		<EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+		<Platforms>AnyCPU;x86</Platforms>
 	</PropertyGroup>
 	<PropertyGroup>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
@@ -45,17 +46,33 @@
 		<DefineConstants>TRACE;DEBUG;ALPHA</DefineConstants>
 		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+	  <DefineConstants>TRACE;DEBUG;ALPHA</DefineConstants>
+	  <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
 		<DefineConstants>TRACE;ALPHA</DefineConstants>
 		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
 		<UseVSHostingProcess>true</UseVSHostingProcess>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+	  <DefineConstants>TRACE;ALPHA</DefineConstants>
+	  <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+	  <UseVSHostingProcess>true</UseVSHostingProcess>
+	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TestDebug|AnyCPU'">
 		<OutputPath>bin\TestDebug\</OutputPath>
 		<DefineConstants>TRACE;DEBUG;TEST</DefineConstants>
 		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TestDebug|x86'">
+	  <OutputPath>bin\TestDebug\</OutputPath>
+	  <DefineConstants>TRACE;DEBUG;TEST</DefineConstants>
+	  <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
 	<PropertyGroup>
 		<RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>

@@ -6,12 +6,14 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace Nucleus.Coop.Controls
 {
 
     public partial class SortCheckBox : CustomCheckBox
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public SortOptions SortOptions { get; set; }
     }
 

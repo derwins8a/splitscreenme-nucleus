@@ -13,6 +13,7 @@ namespace Nucleus.Coop.Controls
         private Color mBorderColor = Color.White;
         [EditorBrowsable(EditorBrowsableState.Always), Browsable(true)]
         [Category("Appearance"), Description("Border Color")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color BorderColor
         {
             get { return mBorderColor; }
@@ -29,6 +30,7 @@ namespace Nucleus.Coop.Controls
         private Color mCheckColor = Color.White;
         [EditorBrowsable(EditorBrowsableState.Always), Browsable(true)]
         [Category("Appearance"), Description("Check Color")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color CheckColor
         {
             get { return mCheckColor; }
@@ -45,6 +47,7 @@ namespace Nucleus.Coop.Controls
         private Color mSelectionColor = Color.Green;
         [EditorBrowsable(EditorBrowsableState.Always), Browsable(true)]
         [Category("Appearance"), Description("Selection Color")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Color SelectionColor
         {
             get { return mSelectionColor; }

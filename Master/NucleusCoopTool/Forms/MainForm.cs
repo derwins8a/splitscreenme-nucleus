@@ -13,6 +13,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using Nucleus.Coop.UI;
+using System.ComponentModel;
 
 namespace Nucleus.Coop
 {
@@ -23,6 +24,7 @@ namespace Nucleus.Coop
     {
         private string[] startArgs;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Action<IntPtr> RawInputAction { get; set; }
 
         private bool canResize = false;
@@ -30,6 +32,7 @@ namespace Nucleus.Coop
         private System.Windows.Forms.Timer WebStatusTimer;
 
         private static bool connected;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool Connected
         {
             get => connected;

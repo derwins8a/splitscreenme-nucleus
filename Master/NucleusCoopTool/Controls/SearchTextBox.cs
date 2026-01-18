@@ -17,6 +17,7 @@ namespace Nucleus.Coop.Controls
 {
     public partial class SearchTextBox : UserControl, IDynamicSized
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string ImagePath { get; set; }
         public FlatTextBox SearchText { get; private set; }
 

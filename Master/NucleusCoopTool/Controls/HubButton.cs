@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Nucleus.Gaming.UI;
 using Nucleus.Coop.UI;
+using System.ComponentModel;
 
 namespace Nucleus.Coop.Controls
 {
@@ -16,6 +17,7 @@ namespace Nucleus.Coop.Controls
         private Label btn_AddGameLabel;
 
         private bool selected;
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool Selected
         {
             get => selected;

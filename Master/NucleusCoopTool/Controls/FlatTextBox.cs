@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Windows.Media.Media3D;
 using System;
 using Nucleus.Gaming.Windows;
+using System.ComponentModel;
 
 public class FlatTextBox : TextBox
 {
@@ -21,6 +22,7 @@ public class FlatTextBox : TextBox
     static extern bool RedrawWindow(IntPtr hWnd, IntPtr lprc, IntPtr hrgn, uint flags);
 
     string hint;
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
     public string Hint
     {
         get { return hint; }
@@ -30,6 +32,7 @@ public class FlatTextBox : TextBox
     private Font hintFont;
 
     Color borderColor = Color.Blue;
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
     public Color BorderColor
     {
         get { return borderColor; }
