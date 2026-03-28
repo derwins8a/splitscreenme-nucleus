@@ -6,6 +6,7 @@ using Nucleus.Gaming.Windows;
 using System;
 using System.IO;
 using System.Windows.Forms;
+using System.Text;
 
 namespace Nucleus.Coop
 {
@@ -19,6 +20,11 @@ namespace Nucleus.Coop
         {
             try
             {
+#if NET10_0_OR_GREATER
+                // Register code pages so Encoding.GetEncoding("IBM437") works on .NET Core / .NET 5+
+                Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+#endif
+
                 AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
                 Application.ThreadException += Application_ThreadException;
 

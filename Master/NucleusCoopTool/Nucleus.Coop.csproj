@@ -700,6 +700,11 @@
 			<Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
+		<None Include="$(ProjectDir)bin$(Configuration)\native\*.dll">
+			<Link>%(FileName)%(Extension)</Link>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Visible>false</Visible>
+		</None>
 	</ItemGroup>
 	<PropertyGroup>
 		<UsePrebuiltProtoInput Condition="'$(UsePrebuiltProtoInput)' == ''">true</UsePrebuiltProtoInput>
