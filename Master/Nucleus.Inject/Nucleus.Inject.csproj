@@ -42,8 +42,14 @@
     <ProjectReference Include="..\NucleusGaming\Nucleus.Gaming.csproj" />
   </ItemGroup>
   <PropertyGroup />
-  <PropertyGroup>
-    <AssemblyName Condition="'$(Platform)' == 'x64'">Nucleus.IJx64</AssemblyName>
-    <AssemblyName Condition="'$(Platform)' == 'x86' or '$(Platform)' == 'Win32'">Nucleus.IJx86</AssemblyName>
+  <!-- Replaced assembly name rules: explicit on solution Configuration|Platform -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64' Or '$(Configuration)|$(Platform)' == 'Release|x64'">
+    <AssemblyName>Nucleus.IJx64</AssemblyName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86' Or '$(Configuration)|$(Platform)' == 'Release|x86' Or '$(Configuration)|$(Platform)' == 'Debug|Win32' Or '$(Configuration)|$(Platform)' == 'Release|Win32'">
+    <AssemblyName>Nucleus.IJx86</AssemblyName>
+  </PropertyGroup>
+  <Target Name="BuildX64" AfterTargets="Build" Condition="'$(Platform)' == 'x86'">
+	  <MSBuild Projects="$(MSBuildProjectFile)" Properties="Configuration=$(Configuration);Platform=x64" Targets="Build" />
+  </Target>
 </Project>
